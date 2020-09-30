@@ -9,7 +9,7 @@ const burger = require("../models/burger.js");
 router.get("/", function (req, res) {
   burger.all(function (data) {
     let hbsObject = {
-      burger: data,
+      burgers: data,
     };
     console.log(hbsObject);
     res.render("index", hbsObject);
@@ -17,6 +17,13 @@ router.get("/", function (req, res) {
 });
 
 router.post("/api/burger", function (req, res) {
-  burger.create(["name"]);
+  burger.create(
+    ["burger_name", "devoured"],
+    [req.body.burger_name, req.body.devoured],
+    function (result) {
+      res.json({ id: result.insertId });
+    }
+  );
 });
+
 module.exports = router;
