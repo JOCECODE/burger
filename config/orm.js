@@ -18,6 +18,7 @@ const orm = {
       }
 
       cb(result);
+      console.log(`ORM.JS LINE 21 ${result}`);
     });
   },
   //   UPDATE employee SET role_id = ? WHERE employee_id = ?;
