@@ -1,6 +1,6 @@
 const connection = require("../config/connection.js");
 
-const orm = {
+let orm = {
   all: function (tableInput, cb) {
     let allQuery = `SELECT * FROM ${tableInput};`;
     connection.query(allQuery, function (err, result) {
@@ -11,7 +11,7 @@ const orm = {
     });
   }, //COLS MUST HAVE A COMMA AFTER (BURGER_NAME, DEVOURED)
   create: function (table, cols, vals, cb) {
-    let createQuery = `INSERT INTO ${table} (${cols}) VALUES ("${vals}");`;
+    let createQuery = `INSERT INTO ${table} (burger_name) VALUES ("${vals}");`;
     connection.query(createQuery, vals, function (err, result) {
       if (err) {
         throw err;
@@ -23,8 +23,12 @@ const orm = {
   },
   //   UPDATE employee SET role_id = ? WHERE employee_id = ?;
   update: function (table, objColVals, condition, cb) {
-    let updateQuery = `UPDATE ${table} SET ${objColVals} WHERE ${condition};`;
+    console.log("---------------------------------------------");
+
+    console.log(condition);
+    let updateQuery = `UPDATE ${table} SET devoured = true WHERE ${condition};`;
     connection.query(updateQuery, function (err, result) {
+      console.log(objColVals);
       if (err) {
         throw err;
       }

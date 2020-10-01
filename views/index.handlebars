@@ -23,14 +23,23 @@
                 <ol>
                     {{#each burgers}}
                     {{#unless devoured}}
-                    {{> burgers/burger-block devoured = true}}
+                    {{> burgers/burger-block devour=true}}
                     {{/unless}}
                     {{/each}}
                 </ol>
             </div>
             <!-- DEVOURED BURGERS ON THE RIGHT SIDE -->
             <div class="col-5">
-                <h1 style="text-align: center">this is the devoured ones</h1>
+                <h3 style="text-align: center">
+                    Burgers ready to be devoured!!!
+                </h3>
+                <ol>
+                    {{#each burgers}}
+                    {{#if devoured}}
+                    {{> burgers/burger-block devour=false}}
+                    {{/if}}
+                    {{/each}}
+                </ol>
             </div>
         </div>
     </div>
@@ -39,7 +48,7 @@
     <div class="row">
         <div class="col-12">
             <div style="text-align: center">
-                <form action="#">
+                <form class="form">
                     <textarea type="text-area" id="burgerName" rows="8" cols="60" style="text-align: center">
 Enter name of burger here</textarea>
                     <br />
