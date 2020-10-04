@@ -2,9 +2,10 @@ const express = require("express");
 
 const router = express.Router();
 
-// Import the model (cat.js) to use its database functions.
+// IMPORT MODELS
 const burger = require("../models/burger.js");
 
+// TO GET ALL BURGERS FROM THE DATABASE
 router.get("/", function (req, res) {
   burger.all(function (data) {
     let hbsObject = {
@@ -15,6 +16,7 @@ router.get("/", function (req, res) {
   });
 });
 
+// TO POST A NEW BURGER
 router.post("/api/burgers", function (req, res) {
   burger.create(["burger_name, devoured"], [req.body.burger_name], function (
     result
@@ -23,6 +25,7 @@ router.post("/api/burgers", function (req, res) {
   });
 });
 
+// TO UPDATE SELECTED BURGER BOOLEAN DEVOURED
 router.put("/api/burgers/:id", function (req, res) {
   let condition = "id = " + req.params.id;
   console.log("condition", condition);

@@ -1,4 +1,5 @@
 $(function () {
+  // ON CLICK TO CHANGE DEVOURED BOOLEAN
   $(".change-devoured").on("click", function (event) {
     let id = $(this).data("id");
     let newDevour = $(this).data("newdevoured");
@@ -15,6 +16,8 @@ $(function () {
       location.reload();
     });
   });
+
+  // ON SUBMIT GRAB USER INFORMATION FOR BURGER NAME
   $(".form").on("submit", function (event) {
     event.preventDefault();
 
