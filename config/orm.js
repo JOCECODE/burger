@@ -18,17 +18,13 @@ let orm = {
       }
 
       cb(result);
-      console.log(`ORM.JS LINE 21 ${result}`);
+      `ORM.JS LINE 21 ${result}`;
     });
   },
   //   UPDATE employee SET role_id = ? WHERE employee_id = ?;
   update: function (table, objColVals, condition, cb) {
-    console.log("---------------------------------------------");
-
-    console.log(condition);
     let updateQuery = `UPDATE ${table} SET devoured = true WHERE ${condition};`;
     connection.query(updateQuery, function (err, result) {
-      console.log(objColVals);
       if (err) {
         throw err;
       }

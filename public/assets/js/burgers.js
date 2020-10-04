@@ -12,7 +12,6 @@ $(function () {
       type: "PUT",
       data: newDevourState,
     }).then(function () {
-      console.log("Mhmmmmmmm!!!! DELICIOUS", newDevour);
       location.reload();
     });
   });

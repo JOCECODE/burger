@@ -1,5 +1,12 @@
 body {
-  background-color: indianred;
+  background-image: url(../img/background_burger.png);
+  background-color: #cccccc;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  opacity: 75%;
 }
 
 .eatBurger {
@@ -8,14 +15,14 @@ body {
 
 .burgersList {
   outline-color: rgb(0, 7, 109);
-  outline-style: inset;
-  background-color: rgb(247, 255, 218);
+  outline-style: solid;
+  background-color: rgb(255, 250, 205);
   padding-top: 2px;
   padding-bottom: 2px;
 }
 
 button:hover {
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(111, 78, 55);
 }
 
 button {
@@ -23,22 +30,56 @@ button {
 }
 
 h3 {
+  font-size: 38px;
   color: whitesmoke;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background: -webkit-linear-gradient(rgb(255, 196, 0), rgb(181, 14, 14));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #burgerName {
   outline-color: rgb(0, 7, 109);
-  outline-style: inset;
+  outline-style: solid;
+  background-color: rgb(255, 250, 205);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(56, 52, 40);
 }
 
 input:hover {
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(111, 78, 55);
 }
 
 input {
   background-color: yellow;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(56, 52, 40);
 }
 
 p {
+  margin-top: 4%;
+  font-size: 28px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: whitesmoke;
+  background: -webkit-linear-gradient(rgb(255, 196, 0), rgb(181, 14, 14));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1 {
+  margin-bottom: 5%;
+  font-size: 54px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background: -webkit-linear-gradient(rgb(255, 196, 0), rgb(181, 14, 14));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+li {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(56, 52, 40);
+}
+
+strong {
+  font-style: italic;
 }
