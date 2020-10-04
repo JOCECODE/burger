@@ -13,42 +13,42 @@
 
 ## User-Demo
 
-[![click to watch the video](http://img.youtube.com/vi/8QlDiUiS_8Y/0.jpg)](http://www.youtube.com/watch?v=8QlDiUiS_8Y "User Demo Of The Application")
-
 Screenshots:
-![screenshots](<./screenshots/Screenshots(2).png> "Screenshot Of User Demo")
-![screenshots](<./screenshots/Screenshots(5).png> "Screenshot Of User Demo")
 ![screenshots](<./screenshots/Screenshots(1).png> "Screenshot Of User Demo")
+![screenshots](<./screenshots/Screenshots(2).png> "Screenshot Of User Demo")
 ![screenshots](<./screenshots/Screenshots(3).png> "Screenshot Of User Demo")
 ![screenshots](<./screenshots/Screenshots(4).png> "Screenshot Of User Demo")
+![screenshots](<./screenshots/Screenshots(5).png> "Screenshot Of User Demo")
 
 ## Description
 
-In this application, the user is able to keep track of all their employee's information
-such as role (job title), name, and personal ID number. It is used through the user's terminal and using mysql a database for the information to be saved.
+In this application, the user can post new burger names and then click the "devour" button to send it to the devour side of the page. It will help
+to organize what burgers are being eaten also, what new burgers are
+ready to be eaten.
 
 ## User-Story
 
 ```
-As a business owner,
-I want to be able to keep track
-OF MY EMPLOYEES JOB, ROLE, AND
-NAME.
+As a burger shop owner,
+I want to be able to make new burger names
+and POST onto the webpage. Then, when I click
+"Devour" sends puts it into another group to
+know what is being eaten and not.
 ```
 
 ## Installation&Usage
 
 - Must download and install [Node](https://nodejs.org/en/download/)
-- Must have inquirer
-  - to install [inquirer](https://www.npmjs.com/package/inquirer) run the following code in your terminal:
-    `npm i inquirer`
-    - to install [console.table](https://www.npmjs.com/package/console.table) run the following code in your terminal:
-      `npm i console.table`
-    - to install [mysql](https://www.npmjs.com/package/mysql) run the following code in your terminal:
-      `npm i mysql`
+
+  - to install [express](https://www.npmjs.com/package/express) run the following code in your terminal:
+    `npm i express`
+  - to install [express-handlebars](https://www.npmjs.com/package/express-handlebars) run the following code in your terminal:
+    `npm i express-handlebars`
+  - to install [mysql](https://www.npmjs.com/package/mysql) run the following code in your terminal:
+    `npm i mysql`
+
 - User-Flow
-  - Using the _server.js_ as a an entry point then running `node server.js` on the terminal will start the application. The application starts. From there, the user can cycle through a list of commands that can `add delete or view employees and roles` as
-    see pleased. Before running the application use the `schema.sql` and `seeds.sql` to create the database and tables needed to hold the information.
+  - Using the _server.js_ as a an entry point then running `npm start` on the terminal will start the application. The application starts. From there, the user can cycle through a list of commands that can `add delete or view employees and roles` as see pleased. Before running the application use the `schema.sql` and `seeds.sql` to create the database and tables needed to hold the information.
 
 ## License
 
